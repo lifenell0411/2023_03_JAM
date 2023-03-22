@@ -12,7 +12,7 @@ title CHAR(100) NOT NULL,
 
 
 SHOW TABLES;
-DESC article;
+DESC ;
 
 INSERT INTO article
 SET regDate = NOW(),
@@ -21,4 +21,16 @@ title = CONCAT('제목',RAND()),
 `body` = CONCAT('내용',RAND());
 
 SELECT *
-FROM article
+FROM `member`;
+ 
+ 
+ CREATE TABLE `member` (
+	id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT
+	,regDate DATETIME NOT NULL
+	, loginId CHAR(100)
+	, loginPw CHAR(100)
+	, `name` CHAR(100))
+			
+			
+			
+DROP TABLE `member`;
